@@ -5,7 +5,7 @@ handlers:
     static_files: www\0
     upload: www/.*
     http_headers:
-      Content-Security-Policy: frame-ancestors 'none'; sandbox
+      Content-Security-Policy: default-src 'none'; frame-ancestors 'none'; sandbox
       Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
       Vary: Accept-Encoding
       X-Content-Type-Options: nosniff
