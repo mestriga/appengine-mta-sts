@@ -10,4 +10,4 @@ handlers:
       Vary: Accept-Encoding
       X-Content-Type-Options: nosniff
     secure: always
-    redirect_http_response_code: 307
+    redirect_http_response_code: 301
