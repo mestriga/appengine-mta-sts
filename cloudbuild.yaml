@@ -1,4 +1,7 @@
 steps:
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+- name: 'gcr.io/cloud-builders/gcloud'
   dir: src
-  args: ['gcloud','app', 'deploy', '--stop-previous-version']
+  args:
+  - app
+  - deploy
+  - --stop-previous-version
