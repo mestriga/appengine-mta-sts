@@ -4,4 +4,3 @@ steps:
   args:
   - app
   - deploy
-  - --stop-previous-version
