@@ -7,9 +7,9 @@ handlers:
   static_files: public\0
   upload: public/.*
   http_headers:
-    Content-Security-Policy: default-src 'none'; frame-ancestors 'none'; sandbox
+    No-Vary-Search: params
     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
     Vary: Accept-Encoding
     X-Content-Type-Options: nosniff
   secure: always
-  redirect_http_response_code: 301
+  redirect_http_response_code: 307
