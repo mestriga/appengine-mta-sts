@@ -3,9 +3,8 @@ automatic_scaling:
   max_instances: 1
 default_expiration: 1h
 handlers:
-- url: .*
-  static_files: public\0
-  upload: public/.*
+- url: /
+  static_dir: public
   http_headers:
     No-Vary-Search: params
     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
