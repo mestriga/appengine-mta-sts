@@ -15,7 +15,7 @@ handlers:
     X-Content-Type-Options: nosniff
   static_files: public\0
   upload: public/robots.txt$
-- url: .*$
+- url: /(.*)$
   secure: always
   redirect_http_response_code: 307
   http_headers:
@@ -24,5 +24,5 @@ handlers:
     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
     Vary: Accept-Encoding
     X-Content-Type-Options: nosniff
-  static_files: public\0
+  static_files: public/\1
   upload: public/.well-known/
