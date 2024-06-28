@@ -23,4 +23,4 @@ handlers:
     Vary: Accept-Encoding
     X-Content-Type-Options: nosniff
   static_files: public\0
-  upload: public/.well-known/
+  upload: public/.well-known/.*
