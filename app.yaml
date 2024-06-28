@@ -3,7 +3,18 @@ automatic_scaling:
   max_instances: 1
 default_expiration: 1h
 handlers:
-- url: /
+- url: /robots.txt
+  secure: always
+  redirect_http_response_code: 307
+  expiration: 1d
+  http_headers:
+    No-Vary-Search: params
+    Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+    Vary: Accept-Encoding
+    X-Content-Type-Options: nosniff
+  static_files: \0
+  upload: robots.txt$
+- url: .*
   secure: always
   redirect_http_response_code: 307
   http_headers:
@@ -12,3 +23,5 @@ handlers:
     Vary: Accept-Encoding
     X-Content-Type-Options: nosniff
   static_dir: public
+  static_files: public\0
+  upload: public/.well-known/
