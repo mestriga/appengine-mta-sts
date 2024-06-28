@@ -2,7 +2,7 @@ runtime: python312
 automatic_scaling:
   max_instances: 1
 handlers:
-- url: /robots.txt$
+- url: /(robots.txt)$
   secure: always
   redirect_http_response_code: 307
   expiration: 1d
@@ -12,7 +12,7 @@ handlers:
     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
     Vary: Accept-Encoding
     X-Content-Type-Options: nosniff
-  static_files: public\0
+  static_files: public/\1
   upload: public/robots.txt$
 - url: /(.*)$
   secure: always
